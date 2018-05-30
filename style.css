@@ -1106,7 +1106,13 @@ h2.h-vertical {
 
 }
 
+.footer-row {
+    background: #f9f9f9;
+    padding: 19px 0;
+}
+
 .webstudio-p {
+    text-align: center;
     font-family: "", "Arial", "Verdana", sans-serif;
     font-size: 14px;
     line-height: 16px;
@@ -1118,74 +1124,32 @@ h2.h-vertical {
     display: inline-block;
     vertical-align: middle;
     width: 89px;
-    height: 24px;
-    position: relative;
+    height: auto;
 }
 
-.reforge:before {
-    content: "";
-    width: 89px;
-    height: 24px;
-    background-image: url(img/reforge.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 1;
-    -webkit-transition-property: all;
+.reforge img {
+    display: block;
+    width: auto;
+    height: auto;
+    -webkit-transition-property: opacity;
     -webkit-transition-duration: .3s;
     -webkit-transition-timing-function: ease;
-    -moz-transition-property: all;
+    -moz-transition-property: opacity;
     -moz-transition-duration: .3s;
     -moz-transition-timing-function: ease;
-    -ms-transition-property: all;
+    -ms-transition-property: opacity;
     -ms-transition-duration: .3s;
     -ms-transition-timing-function: ease;
-    -o-transition-property: all;
+    -o-transition-property: opacity;
     -o-transition-duration: .3s;
     -o-transition-timing-function: ease;
-    transition-property: all;
+    transition-property: opacity;
     transition-duration: .3s;
     transition-timing-function: ease;
 }
 
-.reforge:after {
-    content: "";
-    width: 89px;
-    height: 24px;
-    background-image: url(img/reforge_hover.png);
-    background-position: center;
-    background-repeat: no-repeat;
-    background-size: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    opacity: 0;
-    -webkit-transition-property: all;
-    -webkit-transition-duration: .3s;
-    -webkit-transition-timing-function: ease;
-    -moz-transition-property: all;
-    -moz-transition-duration: .3s;
-    -moz-transition-timing-function: ease;
-    -ms-transition-property: all;
-    -ms-transition-duration: .3s;
-    -ms-transition-timing-function: ease;
-    -o-transition-property: all;
-    -o-transition-duration: .3s;
-    -o-transition-timing-function: ease;
-    transition-property: all;
-    transition-duration: .3s;
-    transition-timing-function: ease;
-}
-
-.reforge:hover:before {
-    opacity: 0;
-}
-
-.reforge:hover:after {
-    opacity: 1;
+.reforge:hover img {
+    opacity: .7;
 }
 
 /*-------------------------------------------*/
