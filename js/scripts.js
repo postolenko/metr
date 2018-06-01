@@ -6,6 +6,10 @@ bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
 // -----------------
 
+var parentBlock;
+
+// -----------------
+
 var thumbsHeightArr;
 var thumb;
 var thumbHeight;
@@ -72,6 +76,24 @@ $(document).ready(function() {
             'scrollTop': visibleBlock.offset().top
         }, 800);
 
+    });
+
+    // -----------------
+
+    $( ".article_2 .imgThumb" ).bind({
+      mouseenter: function() {
+        parentBlock = $(this).closest(".article_2");
+        parentBlock.find(".imgThumb").css({"opacity" : ".5"});
+        $( this ).css({"opacity" : "1"});
+      },
+      mouseleave: function() {
+        $( this ).css({"opacity" : ".5"});
+      }
+    });
+
+    $(".article_2 .imgThumbs").mouseleave(function() {
+        parentBlock = $(this).closest(".article_2");
+        parentBlock.find(".imgThumb").css({"opacity" : "1"});
     });
 
 });
