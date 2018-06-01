@@ -17,10 +17,20 @@ var maxThumbHeight;
 
 // -----------------
 
+var items;
+var lastItem;
+var defaultHeight;
+var visibleItemsDefaultCount = 4;
+var itemsWrappName;
+var itemsWrapp;
+
+// -----------------
+
 $(window).load(function() {
 
     getPromoImgPosition();
     getTHumbsHeight();
+    getItemsWrappHeight();
 
     // -------------------
 
@@ -28,14 +38,13 @@ $(window).load(function() {
         "height" : $(".lines_row").height() + "px"
     });
 
-    console.log($(".lines_wrapp").height() ) ;
-
 });
 
 $(window).resize(function() {
 
     getPromoImgPosition();
     getTHumbsHeight();
+    getItemsWrappHeight();
 
     // -------------------
 
@@ -96,6 +105,44 @@ $(document).ready(function() {
         parentBlock.find(".imgThumb").css({"opacity" : "1"});
     });
 
+    // -----------------
+
+    // var items;
+    // var lastItem;
+    // var defaultHeight;
+    // var visibleItemsDefaultCount = 4;
+    // var itemsWrappName;
+    // var itemsWrapp;
+
+
+    $(".showItems").click(function(e) {
+
+        e.preventDefault();
+
+        itemsWrappName = $(this).attr("data-items");
+
+        itemsWrapp = $(".items_wrapp").filter("[data-items = '"+ itemsWrappName +"']");
+
+        defaultHeight = itemsWrapp.find(".items_wrapp-inner").height();
+
+        itemsWrapp.animate({
+            "height" : defaultHeight + "px"
+        }, 300);
+
+        setTimeout(function() {
+
+            itemsWrapp.css({
+                "height" : "auto"
+            });
+
+            $(".showItems").filter("[data-items = '"+ itemsWrappName +"']").css({"display" : "none"})
+
+        }, 500);
+
+
+    });
+
+
 });
 
 function getPromoImgPosition() {
@@ -140,14 +187,20 @@ function getTHumbsHeight() {
 
 }
 
-// function getContactsSectionSize() {
 
-//     // var contactsWrappHeight = $(".contacts-sect .contacts_wrapp").outerHeight(true);
+function getItemsWrappHeight() {
 
-//     // $(".contacts-sect").css({
-//     //     "height" : contactsWrappHeight + "px"
-//     // });
+    $(".items_wrapp").each(function() {
 
-//     console.log(contactsWrappHeight);
+        lastItem = $(this).find(".article_2").eq(visibleItemsDefaultCount - 1);
 
-// }
+        defaultHeight = lastItem.position().top + lastItem.height() - parseInt(lastItem.css("margin-bottom"));
+
+        $(this).css({
+            "height" : defaultHeight + "px"
+        });
+
+    });
+
+}
+
