@@ -13,11 +13,13 @@
 	<link rel="stylesheet" type="text/css" href="slick/slick.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
-	<script type="text/javascript" src="vendors/js/jquery.js"></script>
-	<script type="text/javascript" src="slick/slick.js"></script>
-	<script type="text/javascript" src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
-	<script type="text/javascript" src="vendors/js/smoothscroll.js"></script>
-	<script type="text/javascript" src="vendors/js/jquery.fancybox.js"></script>
+	<link rel="stylesheet" type="text/css" href="vendors/css/nouislider.css">
+	<script src="vendors/js/jquery.js"></script>
+	<script src="slick/slick.js"></script>
+	<script src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
+	<script src="vendors/js/smoothscroll.js"></script>
+	<script src="vendors/js/jquery.fancybox.js"></script>
+	<script src="vendors/js/nouislider.js"></script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 
 </head>
@@ -61,12 +63,12 @@
 				</a>
 				<div class="main-nav_wrapp">
 					<ul class="main-nav offset-ziro">
-						<li><a href="#">О нас</a></li>
-						<li><a href="#">Услуги</a></li>
-						<li><a href="#">Выполненные проекты</a></li>
-						<li><a href="#">Команда</a></li>
-						<li><a href="#">Схема работы</a></li>
-						<li><a href="#">Контакты</a></li>
+						<li class="active"><a href="#about">О нас</a></li>
+						<li><a href="#services">Услуги</a></li>
+						<li><a href="#portfolio">Выполненные проекты</a></li>
+						<li><a href="#team">Команда</a></li>
+						<li><a href="#scheme">Схема работы</a></li>
+						<li><a href="#contacts">Контакты</a></li>
 					</ul>
 				</div>
 			</div>
@@ -82,23 +84,25 @@
 
 				<!-- Section 1 - Main Page -->
 
-				<section class="promo-sect">
+				<section class="promo-sect" id="about">
 					
 					<div class="promo-article">
 						<div class="promo-img_wrapp">
 							<img class="promo-img" src="img/promo_img.jpg" alt="" />
 						</div>
-						<div class="row">							
+						<div class="row promo">							
 							<div class="descript">
-								<div class="h-vertical_box">
-									<h2 class="h-vertical">Дизайн</h2>
+								<div class="desc-inner">
+									<div class="h-vertical_box">
+										<h2 class="h-vertical">Дизайн</h2>
+									</div>
+									<h1>Дизайн интерьера и 3D-визуализация</h1>
+									<p>любых помещений с авторским надзором от профессиональных дизайнеров Белгороде и Белгородской области</p>
+									<div class="info">
+										<p>Создадим красивый и функциональный интерьер вашей мечты</p>
+									</div>
+									<a href="#portfolio" class="transparent-pill scroll_link">Посмотреть проекты</a>
 								</div>
-								<h1>Дизайн интерьера и 3D-визуализация</h1>
-								<p>любых помещений с авторским надзором от профессиональных дизайнеров Белгороде и Белгородской области</p>
-								<div class="info">
-									<p>Создадим красивый и функциональный интерьер вашей мечты</p>
-								</div>
-								<a href="#" class="transparent-pill">Посмотреть проекты</a>
 							</div>
 						</div>
 					</div>
@@ -107,270 +111,314 @@
 
 				<!-- /Section 1 - Main Page -->
 
-				<!-- Section 2 - Main Page -->
+				<div class="lines_wrapp">
 
-				<section>
-					<div class="row">
-						<div class="article_1 clearfix">
-							<div class="art_1-img">
-								<img src="img/img_01.jpg" alt="" />
-							</div>
-							<div class="descript">
-								<h2>Разрабатываем дизайн,<br /> который <span class="blue">впечатляет</span></h2>
-								<div class="border_wrapp">
-									<p>Красивый интерьер, который Вы видите в журналах, является уникальным сочетанием вкуса заказчика, профессионализма архитектора, чуткости декоратора, большой логистической работы и адекватности строительной бригады.</p>
-									<p>Если хотя бы один из этих звеньев не на должном уровне, то интерьер получится либо не гармоничным, либо с увеличившимся бюджетом, и точно с большим количеством потраченных нервов.</p>
-									<p>Не достаточно просто сделать подборку из красивых картинок в интернете. Здесь нужна комплексная работа специалистов с Вашими пожеланиями и глубокая проработка каждого элемента.</p>
-								</div>
+					<div class="lines_row">
+						<div class="row">
+							<div class="lines">
+								<span></span>
+								<span></span>
 							</div>
 						</div>
-					</div>
-				</section>
+					</div>				
 
-				<!-- /Section 2 - Main Page -->
+					<!-- Section 2 - Main Page -->
 
-				<!-- Section 3 - Main Page -->
-
-				<section>
-					<div class="row">
-
-						<h2 class="main-h2">Что в нас ценят наши клиенты</h2>
-
-						<div class="overflow_wrapp">
-							<div class="thumbnails_2 offset-ziro">
-								<div class="thumb-2">
-									<div class="icon-box">
-										<img src="img/icon_01.png" alt="" />
-									</div>
-									<h3>Работаем на качество,<br /> соблюдаем сроки</h3>
-									<p>Мы узнаем ваш вкус, стиль и поможем воплотить ваши лучшие идеи! Наш многолетний опыт позволяет просчитать точный срок сдачи. Никаких задержек!</p>
+					<section class="sect-2" id="services">
+						<div class="row">
+							<div class="article_1 clearfix">
+								<div class="art_1-img">
+									<img src="img/img_01.jpg" alt="" />
 								</div>
-								<div class="thumb-2">
-									<div class="icon-box">
-										<img src="img/icon_02.png" alt="" />
-									</div>
-									<h3>Создаем уникальный<br /> дизайн</h3>
-									<p>Мы не используем шаблонные решения - мы подбираем уникальный стиль под вас. Никаких клише и избитых тем! Мы знаем все тренды и "фишки" в дизайне интерьера и используем в наших проектах самые свежие идеи!</p>
-								</div>
-								<div class="thumb-2">
-									<div class="icon-box">
-										<img src="img/icon_03.png" alt="" />
-									</div>
-									<h3>Понятный план<br /> для строителей</h3>
-									<p>Никаких шаблонных решений - мы подбираем уникальный стиль под Вас.  Мы знаем все тренды и "фишки" в дизайне интерьера и используем в проектах самые свежие идеи!</p>
-								</div>
-								<div class="thumb-2">
-									<div class="icon-box">
-										<img src="img/icon_04.png" alt="" />
-									</div>
-									<h3>Прозрачная<br /> комплектация</h3>
-									<p>Подробное описание всех работ позволяет отследить каждый рубль или сантиметр. После завершения работ мы выдаём все файлы проекта и яркую наглядную презентацию интерьера.</p>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</section>
-
-				<!-- /Section 3 - Main Page -->
-
-				<!-- Section 4 - Main Page -->
-
-				<section>
-					<div class="row">
-
-						<h2 class="main-h2">Реализованные нами проекты</h2>
-
-						<div>
-
-							<div class="article_2 clearfix">
-								<div class="right">
-									<div class="descript">
-										<h3>2-х комнатная квартира в Белгороде</h3>
-										<p><b>Метраж:</b> 65 м2</p>
-										<p><b>Стиль:</b> модерн</p>
-										<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
-										<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
-									</div>
-									<div class="thumbnails_3 offset-ziro">
-										<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="1"></a>
-										<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="1"></a>
-									</div>
-								</div>
-								<div class="left">
-									<div class="thumbnails_4 offset-ziro">
-										<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="1"></a>
-										<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="1"></a>
-										<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="1"></a>
-										<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="1"></a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article_2 clearfix">
-								<div class="right">
-									<div class="descript">
-										<h3>2-х комнатная квартира в Белгороде</h3>
-										<p><b>Метраж:</b> 65 м2</p>
-										<p><b>Стиль:</b> модерн</p>
-										<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
-										<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
-									</div>
-									<div class="thumbnails_3 offset-ziro">
-										<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="2"></a>
-										<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="2"></a>
-									</div>
-								</div>
-								<div class="left">
-									<div class="thumbnails_4 offset-ziro">
-										<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="2"></a>
-										<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="2"></a>
-										<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="2"></a>
-										<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="2"></a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article_2 clearfix">
-								<div class="right">
-									<div class="descript">
-										<h3>2-х комнатная квартира в Белгороде</h3>
-										<p><b>Метраж:</b> 65 м2</p>
-										<p><b>Стиль:</b> модерн</p>
-										<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
-										<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
-									</div>
-									<div class="thumbnails_3 offset-ziro">
-										<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="3"></a>
-										<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="3"></a>
-									</div>
-								</div>
-								<div class="left">
-									<div class="thumbnails_4 offset-ziro">
-										<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="3"></a>
-										<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="3"></a>
-										<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="3"></a>
-										<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="3"></a>
-									</div>
-								</div>
-							</div>
-
-							<div class="article_2 clearfix">
-								<div class="right">
-									<div class="descript">
-										<h3>2-х комнатная квартира в Белгороде</h3>
-										<p><b>Метраж:</b> 65 м2</p>
-										<p><b>Стиль:</b> модерн</p>
-										<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
-										<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
-									</div>
-									<div class="thumbnails_3 offset-ziro">
-										<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="4"></a>
-										<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="4"></a>
-									</div>
-								</div>
-								<div class="left">
-									<div class="thumbnails_4 offset-ziro">
-										<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="4"></a>
-										<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="4"></a>
-										<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="4"></a>
-										<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="4"></a>
-									</div>
-								</div>
-							</div>
-
-						</div>
-
-						<div class="align-center">
-							<a href="#" class="grey-pill">Показать ещё проекты</a>
-						</div>
-
-					</div>
-				</section>
-
-				<!-- /Section 4 - Main Page -->
-
-				<!-- Section 5 - Main Page -->
-
-			<!-- 	<section>
-					<div class="row">
-
-						<h2 class="main-h2">Узнайте стоимось Вашего проекта прямо сейчас</h2>
-
-						<div class="calc_wrapp">
-							<div class="ranges_wrapp">
-								<h3>Тип помещения</h3>
-								<div id="range_1"></div>
-								<h3>Площадь помещения: 32 м2</h3>
-								<div id="range_2"></div>
-								<h3>К какому стилю вы склоняетесь?</h3>
-								<div id="range_3"></div>
-								<h3>дополнительно</h3>
-								<div id="range_4"></div>
-							</div>
-							<div class="total-price_wrapp">
-								<img src="img/calc_bg.jpg" alt="" />
-								<div class="inner">
-									<h3>Стоимость:</h3>
-									<p>190 000 руб.</p>							
-									<a href="#" class="yellow-pill">Получить точный расчет</a>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</section> -->
-
-				<!-- /Section 5 - Main Page -->
-
-				<!-- Section 6 - Main Page -->
-
-			<!-- 	<section>
-					<div class="row">
-
-						<h2 class="main-h2">Наша команда</h2>
-
-						<div class="team_thumbnails offset-ziro">
-							<div class="team_thumb">
-								<div class="photo-box">
-									<img src="img/team_photo_01.png" alt="" />
-								</div>
-								<h3>Дмитрий Портнягин</h3>
-								<p>Генеральный директор</p>
-							</div>
-							<div class="team_thumb">
-								<div class="photo-box">
-									<img src="img/team_photo_02.png" alt="" />
-								</div>
-								<h3>Алексей Николаев</h3>
-								<p>Исполнительный директор</p>
-							</div>
-							<div class="team_thumb">
-								<div class="photo-box">
-									<img src="img/team_photo_03.png" alt="" />
-								</div>
-								<h3>Павел Смирнов</h3>
-								<p>Коммерческий директор</p>
-							</div>
-						</div>
-
-					</div>
-				</section> -->
-
-				<!-- /Section 6 - Main Page -->
-
-				<!-- Section 7 - Main Page -->
-
-				<!-- <section>
-					<div class="row">
-
-						<h2 class="main-h2">Что вы получите в итоге</h2>
-
-						<div class="item-article clearfix">
-							<div class="left">
 								<div class="descript">
+									<h2>Разрабатываем дизайн,<br /> который <span class="blue">впечатляет</span></h2>
+									<div class="border_wrapp">
+										<p>Красивый интерьер, который Вы видите в журналах, является уникальным сочетанием вкуса заказчика, профессионализма архитектора, чуткости декоратора, большой логистической работы и адекватности строительной бригады.</p>
+										<p>Если хотя бы один из этих звеньев не на должном уровне, то интерьер получится либо не гармоничным, либо с увеличившимся бюджетом, и точно с большим количеством потраченных нервов.</p>
+										<p>Не достаточно просто сделать подборку из красивых картинок в интернете. Здесь нужна комплексная работа специалистов с Вашими пожеланиями и глубокая проработка каждого элемента.</p>
+									</div>
+								</div>
+							</div>
+						</div>
+					</section>
+
+					<!-- /Section 2 - Main Page -->
+
+					<!-- Section 3 - Main Page -->
+
+					<section>
+						<div class="row">
+
+							<h2 class="main-h2">Что в нас ценят наши клиенты</h2>
+
+							<div class="overflow_wrapp">
+								<div class="thumbnails_2 offset-ziro">
+									<div class="thumb-2">
+										<div class="icon-box">
+											<img src="img/icon_01.png" alt="" />
+										</div>
+										<h3>Работаем на качество,<br /> соблюдаем сроки</h3>
+										<p>Мы узнаем ваш вкус, стиль и поможем воплотить ваши лучшие идеи! Наш многолетний опыт позволяет просчитать точный срок сдачи. Никаких задержек!</p>
+									</div>
+									<div class="thumb-2">
+										<div class="icon-box">
+											<img src="img/icon_02.png" alt="" />
+										</div>
+										<h3>Создаем уникальный<br /> дизайн</h3>
+										<p>Мы не используем шаблонные решения - мы подбираем уникальный стиль под вас. Никаких клише и избитых тем! Мы знаем все тренды и "фишки" в дизайне интерьера и используем в наших проектах самые свежие идеи!</p>
+									</div>
+									<div class="thumb-2">
+										<div class="icon-box">
+											<img src="img/icon_03.png" alt="" />
+										</div>
+										<h3>Понятный план<br /> для строителей</h3>
+										<p>Никаких шаблонных решений - мы подбираем уникальный стиль под Вас.  Мы знаем все тренды и "фишки" в дизайне интерьера и используем в проектах самые свежие идеи!</p>
+									</div>
+									<div class="thumb-2">
+										<div class="icon-box">
+											<img src="img/icon_04.png" alt="" />
+										</div>
+										<h3>Прозрачная<br /> комплектация</h3>
+										<p>Подробное описание всех работ позволяет отследить каждый рубль или сантиметр. После завершения работ мы выдаём все файлы проекта и яркую наглядную презентацию интерьера.</p>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<!-- /Section 3 - Main Page -->
+
+					<!-- Section 4 - Main Page -->
+
+					<section id="portfolio">
+						<div class="row">
+
+							<h2 class="main-h2">Реализованные нами проекты</h2>
+
+							<div>
+
+								<div class="article_2 clearfix">
+									<div class="right">
+										<div class="descript">
+											<h3>2-х комнатная квартира в Белгороде</h3>
+											<p><b>Метраж:</b> 65 м2</p>
+											<p><b>Стиль:</b> модерн</p>
+											<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
+											<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
+										</div>
+										<div class="thumbnails_3 offset-ziro">
+											<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="1"></a>
+											<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="1"></a>
+										</div>
+									</div>
+									<div class="left">
+										<div class="thumbnails_4 offset-ziro">
+											<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="1"></a>
+											<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="1"></a>
+											<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="1"></a>
+											<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="1"></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="article_2 clearfix">
+									<div class="right">
+										<div class="descript">
+											<h3>2-х комнатная квартира в Белгороде</h3>
+											<p><b>Метраж:</b> 65 м2</p>
+											<p><b>Стиль:</b> модерн</p>
+											<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
+											<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
+										</div>
+										<div class="thumbnails_3 offset-ziro">
+											<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="2"></a>
+											<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="2"></a>
+										</div>
+									</div>
+									<div class="left">
+										<div class="thumbnails_4 offset-ziro">
+											<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="2"></a>
+											<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="2"></a>
+											<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="2"></a>
+											<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="2"></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="article_2 clearfix">
+									<div class="right">
+										<div class="descript">
+											<h3>2-х комнатная квартира в Белгороде</h3>
+											<p><b>Метраж:</b> 65 м2</p>
+											<p><b>Стиль:</b> модерн</p>
+											<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
+											<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
+										</div>
+										<div class="thumbnails_3 offset-ziro">
+											<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="3"></a>
+											<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="3"></a>
+										</div>
+									</div>
+									<div class="left">
+										<div class="thumbnails_4 offset-ziro">
+											<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="3"></a>
+											<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="3"></a>
+											<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="3"></a>
+											<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="3"></a>
+										</div>
+									</div>
+								</div>
+
+								<div class="article_2 clearfix">
+									<div class="right">
+										<div class="descript">
+											<h3>2-х комнатная квартира в Белгороде</h3>
+											<p><b>Метраж:</b> 65 м2</p>
+											<p><b>Стиль:</b> модерн</p>
+											<p><b>Что сделано:</b> дизайн интерьера, 3D-визуализация, авторский надзор.</p>
+											<p><b>Описание:</b> Краткое описание подхода к работе. Расскажем о том, как мы любим свою работу, что каждый проект для нас уникальный, что учитываем все пожелания клиента и создаём проекты, которые нравятся всем.</p>
+										</div>
+										<div class="thumbnails_3 offset-ziro">
+											<a href="img/033.jpg" class="thumb-3" style="background-image: url(img/033.jpg)" data-fancybox="4"></a>
+											<a href="img/0685_2.jpg" class="thumb-3" style="background-image: url(img/0685_2.jpg)" data-fancybox="4"></a>
+										</div>
+									</div>
+									<div class="left">
+										<div class="thumbnails_4 offset-ziro">
+											<a href="img/033_1.jpg" class="thumb-4" style="background-image: url(img/033_1.jpg)" data-fancybox="4"></a>
+											<a href="img/01111.jpg" class="thumb-4" style="background-image: url(img/01111.jpg)" data-fancybox="4"></a>
+											<a href="img/0444.jpg" class="thumb-4" style="background-image: url(img/0444.jpg)" data-fancybox="4"></a>
+											<a href="img/0685_1.jpg" class="thumb-4" style="background-image: url(img/0685_1.jpg)" data-fancybox="4"></a>
+										</div>
+									</div>
+								</div>
+
+							</div>
+
+							<div class="align-center">
+								<a href="#" class="grey-pill">Показать ещё проекты</a>
+							</div>
+
+						</div>
+					</section>
+
+					<!-- /Section 4 - Main Page -->
+
+					<!-- Section 5 - Main Page -->
+
+					<section>
+						<div class="row">
+
+							<h2 class="main-h2">Узнайте стоимось Вашего проекта прямо сейчас</h2>
+
+							<div class="calc_wrapp">
+								<div class="ranges_wrapp">
+									<div class="range_wrapp">
+										<h3>Тип помещения</h3>
+										<div class="range_slider">
+											<div class="range" id="range_1"></div>
+										</div>
+									</div>
+									<div class="range_wrapp">
+										<h3>Площадь помещения: <span class="msqVal">0</span> м2</h3>
+										<div class="range_slider">
+											<div class="range" id="range_2"></div>
+										</div>
+									</div>
+									<div class="range_wrapp">
+										<h3>К какому стилю вы склоняетесь?</h3>
+										<div class="range_slider">
+											<div class="range" id="range_3"></div>
+										</div>
+									</div>
+									<div class="range_wrapp">
+										<h3>дополнительно</h3>
+										<div class="checkboxes_wrapp">
+											<div class="checkbox">
+												<input type="checkbox" id="ch_1" />
+												<label for="ch_1">Авторский надзор</label>
+											</div>
+											<div class="checkbox">
+												<input type="checkbox" id="ch_2" />
+												<label for="ch_2">Ремонт под ключ</label>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="total-price_wrapp">
+									<img class="total-price-img" src="img/photo.jpg" alt="" />
+									<div class="inner">
+										<h3>Стоимость:</h3>
+										<p>190 000 руб.</p>							
+										<a href="#" class="yellow-pill">Получить точный расчет</a>
+									</div>
+								</div>
+							</div>
+
+						</div>
+					</section>
+
+					<!-- /Section 5 - Main Page -->
+
+					<!-- Section 6 - Main Page -->
+
+					<section id="team">
+
+						<div class="row">
+
+							<h2 class="main-h2">Наша команда</h2>
+
+						</div>
+
+						<div class="team_thumbnails set_height">
+							<div class="row offset-ziro">
+								<div class="team_thumb thumb">
+									<div class="photo-box">
+										<img src="img/person_1.png" alt="" />
+									</div>
+									<div class="descript inner">
+										<h3>Дмитрий Портнягин</h3>
+										<p>Генеральный директор</p>
+									</div>
+								</div>
+								<div class="team_thumb thumb">
+									<div class="photo-box">
+										<img src="img/person_2.png" alt="" />
+									</div>
+									<div class="descript inner">
+										<h3>Алексей Николаев</h3>
+										<p>Исполнительный директор</p>
+									</div>
+								</div>
+								<div class="team_thumb thumb">
+									<div class="photo-box">
+										<img src="img/person_3.png" alt="" />
+									</div>
+									<div class="descript inner">
+										<h3>Павел Смирнов</h3>
+										<p>Коммерческий директор</p>
+									</div>
+								</div>
+							</div>
+							<div class="thumb_bg"></div>
+						</div>
+
+					</section>
+
+					<!-- /Section 6 - Main Page -->
+
+					<!-- Section 7 - Main Page -->
+
+					<section class="sect-7" id="scheme">
+						<div class="row">
+
+							<h2 class="main-h2">Что вы получите в итоге</h2>
+
+							<div class="item-article clearfix">
+								<div class="left">
 									<div class="col-1">
-										<p class="num"></p>
+										<p class="num">1</p>
 									</div>
 									<div class="col-2">
 										<h3>Планировочное решение</h3>
@@ -381,213 +429,266 @@
 										</ol>
 									</div>
 								</div>
+								<div class="right">
+									<img src="img/img_03.jpg" alt="" />
+								</div>
 							</div>
-							<div class="right">
-								<img scr="img/" alt="" />
-							</div>
-						</div>
 
-						<div class="item-article clearfix">
-							<div class="left">
-								<div class="descript">
-									<div class="col-1">
-										<p class="num"></p>
+							<div class="item-article clearfix">
+								<div class="left">
+									<div class="descript">
+										<div class="col-1">
+											<p class="num">2</p>
+										</div>
+										<div class="col-2">
+											<h3>3D коллажи</h3>
+											<ol>
+												<li>3D коллажи всех помещений</li>
+											</ol>
+										</div>
 									</div>
-									<div class="col-2">
-										<h3>3D коллажи</h3>
+								</div>
+								<div class="right">
+									<img src="img/img_04.jpg" alt="" />
+								</div>
+							</div>
+
+							<div class="item-article clearfix">
+								<div class="left">
+									<div class="descript">
+										<div class="col-1">
+											<p class="num">3</p>
+										</div>
+										<div class="col-2">
+											<h3>3D визуализация</h3>
+											<ol>
+												<li>фотореалистичные изображения всех помещений</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="right">
+									<img src="img/0685.jpg" alt="" />
+								</div>
+							</div>
+
+							<div class="item-article clearfix">
+								<div class="left">
+									<div class="descript">
+										<div class="col-1">
+											<p class="num">4</p>
+										</div>
+										<div class="col-2">
+											<h3>Рабочая документация</h3>
+											<ol>
+												<li>полный комплект документации для работы строителей</li>
+											</ol>
+										</div>
+									</div>
+								</div>
+								<div class="right">
+									<div class="border_wrapp_2">
+										<h3>Заголовок краткой текстовой информации</h3>
+										<p>Краткое текстовое описание что именно входит в каждый пункт. Несколькими фразами в общих чертах описываем состав документов и зачем они нужны, какую пользу принесут клиенту. Всю эту и другую информацию на посадочной странице можно будет редактировать удобную через систему управления сайтом.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="item-article clearfix">
+								<div class="left">
+									<div class="descript">
+										<div class="col-1">
+											<p class="num">5</p>
+										</div>
+										<div class="col-2">
+											<h3>Комплектация</h3>
+											<p class="blue-info">Бесплатно</p>
+										</div>
+									</div>
+								</div>
+								<div class="right">
+									<div class="border_wrapp_2">
+										<h3>Заголовок краткой текстовой информации</h3>
+										<p>Краткое текстовое описание что именно входит в каждый пункт. Несколькими фразами в общих чертах описываем состав документов и зачем они нужны, какую пользу принесут клиенту. Всю эту и другую информацию на посадочной странице можно будет редактировать удобную через систему управления сайтом.</p>
+									</div>
+								</div>
+							</div>
+
+							<div class="item-article clearfix">
+								<div class="left">
+									<div class="descript">
+										<div class="col-1">
+											<p class="num">6</p>
+										</div>
+										<div class="col-2">
+											<h3>Авторский надзор</h3>
+										</div>
+									</div>
+								</div>
+								<div class="right">
+									<div class="border_wrapp_2">
+										<h3>1 вариант:</h3>
+										<h4>Оплата за месяц, сюда входит:</h4>
 										<ol>
-											<li>3D коллажи всех помещений</li>
+											<li>5 выездов на стройку</li>
+											<li>внесение изменений в проект, возникших после демонтажа старых и возведения новых перегородок</li>
+											<li>доукомплектация объекта</li>
+										</ol>
+									</div>
+									<div class="border_wrapp_2">
+										<h3>2 вариант:</h3>
+										<h4>Оплата за выезд, сюда входит:</h4>
+										<ol>
+											<li>1 выезд на стройку или салон</li>
+											<li>внесение изменений в проект, осуществляются за отдельную плату (500р. - один чертёж)</li>
 										</ol>
 									</div>
 								</div>
 							</div>
-							<div class="right">
-								<img scr="img/" alt="" />
-							</div>
+
 						</div>
+					</section>
 
-						<div class="item-article clearfix">
-							<div class="left">
-								<div class="descript">
-									<div class="col-1">
-										<p class="num"></p>
-									</div>
-									<div class="col-2">
-										<h3>3D визуализация</h3>
-										<ol>
-											<li>фотореалистичные изображения всех помещений</li>
-										</ol>
-									</div>
-								</div>
-							</div>
-							<div class="right">
-								<img scr="img/" alt="" />
-							</div>
-						</div>
+					<!-- /Section 7 - Main Page -->
 
-						<div class="item-article clearfix">
-							<div class="left">
-								<div class="descript">
-									<div class="col-1">
-										<p class="num"></p>
-									</div>
-									<div class="col-2">
-										<h3>Рабочая документация</h3>
-										<ol>
-											<li>полный комплект документации для работы строителей</li>
-										</ol>
-									</div>
-								</div>
-							</div>
-							<div class="right">
-								<div class="border_wrapp_2">
-									<h3>Заголовок краткой текстовой информации</h3>
-									<p>Краткое текстовое описание что именно входит в каждый пункт. Несколькими фразами в общих чертах описываем состав документов и зачем они нужны, какую пользу принесут клиенту. Всю эту и другую информацию на посадочной странице можно будет редактировать удобную через систему управления сайтом.</p>
-								</div>
-							</div>
-						</div>
+					<!-- Section 8 - Main Page -->
 
-						<div class="item-article clearfix">
-							<div class="left">
-								<div class="descript">
-									<div class="col-1">
-										<p class="num"></p>
-									</div>
-									<div class="col-2">
-										<h3>Комплектация</h3>
-										<p class="blue-info">Бесплатно</p>
-									</div>
-								</div>
-							</div>
-							<div class="right">
-								<div class="border_wrapp_2">
-									<h3>Заголовок краткой текстовой информации</h3>
-									<p>Краткое текстовое описание что именно входит в каждый пункт. Несколькими фразами в общих чертах описываем состав документов и зачем они нужны, какую пользу принесут клиенту. Всю эту и другую информацию на посадочной странице можно будет редактировать удобную через систему управления сайтом.</p>
-								</div>
-							</div>
-						</div>
-
-						<div class="item-article clearfix">
-							<div class="left">
-								<div class="descript">
-									<div class="col-1">
-										<p class="num"></p>
-									</div>
-									<div class="col-2">
-										<h3>Авторский надзор</h3>
-									</div>
-								</div>
-							</div>
-							<div class="right">
-								<div class="border_wrapp_2">
-									<h3>1 вариант:</h3>
-									<h4>Оплата за месяц, сюда входит:</h4>
-									<ol>
-										<li>5 выездов на стройку</li>
-										<li>внесение изменений в проект, возникших после демонтажа старых и возведения новых перегородок</li>
-										<li>доукомплектация объекта</li>
-									</ol>
-								</div>
-								<div class="border_wrapp_2">
-									<h3>2 вариант:</h3>
-									<h4>Оплата за выезд, сюда входит:</h4>
-									<ol>
-										<li>1 выезд на стройку или салон</li>
-										<li>внесение изменений в проект, осуществляются за отдельную плату (500р. - один чертёж)</li>
-									</ol>
-								</div>
-							</div>
-						</div>
-
-					</div>
-				</section> -->
-
-				<!-- /Section 7 - Main Page -->
-
-				<!-- Section 8 - Main Page -->
-
-				<!-- <section>
-					<div class="row">
+					<section>
 
 						<div class="article_3">
-							<div class="left">
-								<img src="img/" alt="" />
-								<a href="#" class="yellow-pill">Посмотреть пример</a>
-							</div>
-							<div class="right">
-								<p>После завершения всех работ вы <span class="blue">получите красочную презентацию</span> со всеми материалами вашего проекта</p>
+							<div class="row offset-ziro">
+								<div class="col-1">
+									<div class="img-box">
+										<img src="img/presentation.png" alt="" />
+										<a href="#" class="yellow-pill">Посмотреть пример</a>
+									</div>
+								</div>
+								<div class="col-2">
+									<div class="descript">
+										<p>После завершения всех работ<br /> вы <span class="blue">получите красочную презентацию</span> со всеми материалами вашего проекта</p>
+									</div>
+								</div>
 							</div>
 						</div>
 
-					</div>
-				</section> -->
+					</section>
 
-				<!-- /Section 8 - Main Page -->
+					<!-- /Section 8 - Main Page -->
 
-				<!-- Section 9 - Main Page -->
+					<!-- Section 9 - Main Page -->
 
-				<!-- <section>
-					<div class="row">
+					<section class="sect-9">
+						<div class="row">
 
-						<h2 class="main-h2">Что говорят о нас клиенты</h2>
+							<h2 class="main-h2">Что говорят о нас клиенты</h2>
 
-						<div class="testimonilas">
-							<div class="slide">
-								<div class="testimonial">
-									<div class="img-box">
-										<img src="img/" alt="" />
-									</div>
-									<div class="descript">
-										<h3>Проект получился очень элегантный</h3>
-										<p>«Ваши работы восхищают! Извините, что у меня не хватило смелости, и я периодически гасила ваши порывы и смелые решения, хоть я и понимаю, что это очень красиво, видимо я еще не доросла. Отдельное спасибо, что все правки вносились без неприятия и осуждений. Спасибо за сердечную, дружескую поддержку в подборе материалов в моменты моих метаний и сомнений.»</p>
-										<div class="author-box">
-											<div class="col-1">
-												<img src="img/" alt="" />
+							<div class="testimonilas-slider">
+								<div class="slide">
+									<div class="testimonial clearfix">
+										<div class="img-box">
+											<img src="img/img_01.jpg" alt="" />
+										</div>
+										<div class="descript">
+											<h3>Проект получился очень элегантный</h3>
+											<p>«Ваши работы восхищают! Извините, что у меня не хватило смелости, и я периодически гасила ваши порывы и смелые решения, хоть я и понимаю, что это очень красиво, видимо я еще не доросла. Отдельное спасибо, что все правки вносились без неприятия и осуждений. Спасибо за сердечную, дружескую поддержку в подборе материалов в моменты моих метаний и сомнений.»</p>
+											<div class="author-box">
+												<div class="col-1">
+													<div class="photo-box">
+														<img src="img/testimonials.jpg" alt="" />
+													</div>
+												</div>
+												<div class="col-2">
+													<h3>Марина Приходько</h3>
+													<p><a class="yellow_link" target="_blank" href="https://vk.com/id144934572">https://vk.com/id144934572</a></p>
+												</div>
 											</div>
-											<div class="col-2">
-												<h3>Марина Приходько</h3>
-												<p><a class="yellow_link" href="https://vk.com/id144934572">https://vk.com/id144934572</a></p>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="testimonial clearfix">
+										<div class="img-box">
+											<img src="img/img_01.jpg" alt="" />
+										</div>
+										<div class="descript">
+											<h3>Проект получился очень элегантный 2</h3>
+											<p>«Ваши работы восхищают! Извините, что у меня не хватило смелости, и я периодически гасила ваши порывы и смелые решения, хоть я и понимаю, что это очень красиво, видимо я еще не доросла. Отдельное спасибо, что все правки вносились без неприятия и осуждений. Спасибо за сердечную, дружескую поддержку в подборе материалов в моменты моих метаний и сомнений.»</p>
+											<div class="author-box">
+												<div class="col-1">
+													<div class="photo-box">
+														<img src="img/testimonials.jpg" alt="" />
+													</div>
+												</div>
+												<div class="col-2">
+													<h3>Марина Приходько</h3>
+													<p><a class="yellow_link" target="_blank" href="https://vk.com/id144934572">https://vk.com/id144934572</a></p>
+												</div>
+											</div>
+										</div>
+									</div>
+								</div>
+								<div class="slide">
+									<div class="testimonial clearfix">
+										<div class="img-box">
+											<img src="img/img_01.jpg" alt="" />
+										</div>
+										<div class="descript">
+											<h3>Проект получился очень элегантный 3</h3>
+											<p>«Ваши работы восхищают! Извините, что у меня не хватило смелости, и я периодически гасила ваши порывы и смелые решения, хоть я и понимаю, что это очень красиво, видимо я еще не доросла. Отдельное спасибо, что все правки вносились без неприятия и осуждений. Спасибо за сердечную, дружескую поддержку в подборе материалов в моменты моих метаний и сомнений.»</p>
+											<div class="author-box">
+												<div class="col-1">
+													<div class="photo-box">
+														<img src="img/testimonials.jpg" alt="" />
+													</div>
+												</div>
+												<div class="col-2">
+													<h3>Марина Приходько</h3>
+													<p><a class="yellow_link" target="_blank" href="https://vk.com/id144934572">https://vk.com/id144934572</a></p>
+												</div>
 											</div>
 										</div>
 									</div>
 								</div>
 							</div>
+
 						</div>
+					</section>
 
-					</div>
-				</section> -->
+					<!-- /Section 9 - Main Page -->
 
-				<!-- /Section 9 - Main Page -->
+				</div>
 
 				<!-- Section 10 - Main Page -->
 
-				<!-- <section>
-					<div id="map"></div>
+				<section class="contacts-sect" id="contacts">
+
 					<div class="row">
 
 						<div class="contacts_wrapp">
+							<div class="inner">
+								<div class="contacts-thumb">
+									<h3>Адрес:</h3>
+									<p>Белгород, улица Костюкова, 46Б, офис 310</p>
+								</div>
 
-							<div class="contacts-thumb">
-								<h3>Адрес:</h3>
-								<p>Белгород, улица Костюкова, 46Б, офис 310</p>
+								<div class="contacts-thumb">
+									<h3>Телефон:</h3>
+									<p><a class="black-link" href="tel:+79805239092">+7 (980) 523-90-92</a></p>
+								</div>
+
+								<div class="contacts-thumb">
+									<h3>E-mail:</h3>
+									<p><a class="yellow_link" href="mailto:hello@domain.ru">hello@domain.ru</a></p>
+								</div>
+
+								<a href="#" class="yellow-pill">Консультация дизайнера</a>
 							</div>
-
-							<div class="contacts-thumb">
-								<h3>Телефон:</h3>
-								<p><a class="black-link" href="+79805239092">+7 (980) 523-90-92</a></p>
-							</div>
-
-							<div class="contacts-thumb">
-								<h3>E-mail:</h3>
-								<p><a class="yellow_link" href="mailto:hello@domain.ru">hello@domain.ru</a></p>
-							</div>
-
-							<a href="#" class="yellow-pill">Консультация дизайнера</a>
-
 						</div>
 
 					</div>
-				</section> -->
+					<div id="map"></div>
+
+				</section>
 
 				<!-- /Section 10 - Main Page -->
 
@@ -598,7 +699,7 @@
 
 		<footer>
 
-			<div class="main_sect header-site">
+			<div class="main_sect footer">
 
 				<div class="row row-1">
 					<div class="thumb-1">
@@ -629,12 +730,12 @@
 					</a>
 					<div class="main-nav_wrapp">
 						<ul class="main-nav offset-ziro">
-							<li><a href="#">О нас</a></li>
-							<li><a href="#">Услуги</a></li>
-							<li><a href="#">Выполненные проекты</a></li>
-							<li><a href="#">Команда</a></li>
-							<li><a href="#">Схема работы</a></li>
-							<li><a href="#">Контакты</a></li>
+							<li><a href="#about">О нас</a></li>
+							<li><a href="#services">Услуги</a></li>
+							<li><a href="#portfolio">Выполненные проекты</a></li>
+							<li><a href="#team">Команда</a></li>
+							<li><a href="#scheme">Схема работы</a></li>
+							<li><a href="#contacts">Контакты</a></li>
 						</ul>
 					</div>
 				</div>
@@ -643,7 +744,7 @@
 
 			<div class="footer-row">
 				<div class="row">
-					<p class="webstudio-p"><span>Разработка и продвижение сайта </span> <a href="http://reforge.ru/" class="reforge"><img src="img/reforge.png" alt="Reforge"></a></p>
+					<p class="webstudio-p"><span>Разработка и продвижение сайта</span><a href="http://reforge.ru/" class="reforge"><img src="img/reforge.png" alt="Reforge"></a></p>
 				</div>
 			</div>
 
@@ -653,6 +754,8 @@
 
 		<script src="js/scripts.js"></script>
 		<script src="js/additional_scripts.js"></script>
+		<script src="js/map.js"></script>
+		<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyBoGWEyUlxHOSfMgm2TliQLggP3mej7d_I&callback=initMap" async defer></script>
 	
 	</div>
 
