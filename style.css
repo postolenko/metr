@@ -1625,7 +1625,8 @@ h2.h-vertical {
 .item-article .left .col-1 {
     display: table-cell;
     vertical-align: top;
-    width: 50px;
+    width: 66px;
+    padding-left: 19px;
 }
 
 .item-article .left .col-2 {
@@ -1644,12 +1645,12 @@ h2.h-vertical {
 
 .num:before {
     content: "";
-    width: 35px;
+    width: 38px;
     height: 1px;
     background-color: #f3f3f3;
     position: absolute;
     top: 14px;
-    left: -43px;
+    left: -48px;
 }
 
 .item-article h3 {
