@@ -255,6 +255,7 @@ h2 {
 }
 
 h2.main-h2 {
+    text-transform: uppercase;
     text-align: center;
 }
 
@@ -1067,7 +1068,7 @@ label {
 
 .promo-article .desc-inner {
     max-width: 474px;
-    padding: 71px 3.5% 52px 0;
+    padding: 75px 3.5% 56px 0;
     position: relative;
     z-index: 2;
 }
@@ -1973,13 +1974,17 @@ h2.h-vertical {
 /*-- Section 1 - TY Page --*/
 
 .promo-article.ty .descript .h-vertical_box {
-    top: 65px;
+    top: 115px;
     left: -159px;
 }
 
 .ty h2.h-vertical {
     font-size: 42px;
     line-height: 42px;
+}
+
+.promo-article .desc-inner {
+    padding: 121px 3.5% 94px 0;
 }
 
 .ty .transparent-pill {

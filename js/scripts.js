@@ -20,12 +20,6 @@ $(window).load(function() {
 
     // -------------------
 
-    $(".promo").css({
-        "min-height" : $(window).height() - $(".header-site").height() + "px"
-    });
-
-    // -------------------
-
     $(".lines_row .row").css({
         "height" : $(".lines_row").height() + "px"
     });
@@ -38,12 +32,6 @@ $(window).resize(function() {
 
     getPromoImgPosition();
     getTHumbsHeight();
-
-     // -------------------
-
-    $(".promo").css({
-        "min-height" : $(window).height() - $(".header-site").height() + "px"
-    });
 
     // -------------------
 
