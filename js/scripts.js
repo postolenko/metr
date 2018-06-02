@@ -10,6 +10,12 @@ var parentBlock;
 
 // -----------------
 
+var promoImg;
+var promoArticleWidth;
+var leftCoord;
+
+// -----------------
+
 var thumbsHeightArr;
 var thumb;
 var thumbHeight;
@@ -41,6 +47,8 @@ $(window).load(function() {
 });
 
 $(window).resize(function() {
+
+    bodyWidth = w.innerWidth || e.clientWidth || g.clientWidth;
 
     getPromoImgPosition();
     getTHumbsHeight();
@@ -142,25 +150,63 @@ $(document).ready(function() {
 
     });
 
+    // ------------
+
+
+    $(".respmenubtn").click(function() {
+
+        if( $(".resp-nav_wrapp").is(":hidden") ) {
+
+            $(".resp-nav_wrapp").fadeIn(300);
+
+            $(this).addClass("active");
+
+        } else {
+
+            $(".resp-nav_wrapp").fadeOut(300);
+
+            $(this).removeClass("active");
+
+        }
+
+    });
+
+    $(this).keydown(function(eventObject){
+
+        if (eventObject.which == 27 &&
+            $(".resp-nav_wrapp").is(":visible") ) {
+
+                $(".resp-nav_wrapp").fadeOut(300);
+
+                $(".respmenubtn").removeClass("active");
+
+        }
+
+    });
+
 
 });
 
 function getPromoImgPosition() {
 
-    $(".promo-article").each(function() {
+    if( bodyWidth > 900 ) {
 
-        var promoImg = $(this).find(".promo-img_wrapp");
+        $(".promo-article").each(function() {
 
-        var promoArticleWidth = $(this).width();
+            promoImg = $(this).find(".promo-img_wrapp");
 
-        var leftCoord = $(this).find(".desc-inner").offset().left + $(this).find(".desc-inner").outerWidth();
+            promoArticleWidth = $(this).width();
 
-        promoImg.css({
-            "width" : promoArticleWidth - leftCoord + "px"
+            leftCoord = $(this).find(".desc-inner").offset().left + $(this).find(".desc-inner").outerWidth();
+
+            promoImg.css({
+                "width" : promoArticleWidth - leftCoord + "px"
+            });
+
         });
 
-    });
-
+    }
+    
 }
 
 function getTHumbsHeight() {
