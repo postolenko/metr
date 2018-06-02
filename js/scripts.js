@@ -143,6 +143,8 @@ $(document).ready(function() {
                 "height" : "auto"
             });
 
+            itemsWrapp.addClass("fullHeight");
+
             $(".showItems").filter("[data-items = '"+ itemsWrappName +"']").css({"display" : "none"})
 
         }, 500);
@@ -206,47 +208,70 @@ function getPromoImgPosition() {
         });
 
     }
-    
+
 }
 
 function getTHumbsHeight() {
 
-    $(".set_height").each(function() {
+    if( bodyWidth >= 480 ) {
 
-        thumbsHeightArr = [];
+        $(".set_height").each(function() {
 
-        thumb = $(this).find(".thumb");
+            thumbsHeightArr = [];
 
-        thumb.each(function() {
+            thumb = $(this).find(".thumb");
 
-            thumbHeight = $(this).find(".inner").outerHeight();
+            thumb.each(function() {
 
-            thumbsHeightArr.push(thumbHeight);
+                thumbHeight = $(this).find(".inner").outerHeight();
+
+                thumbsHeightArr.push(thumbHeight);
+
+            });
+
+            maxThumbHeight = Math.max.apply(null, thumbsHeightArr);
+
+            $(this).find(".thumb_bg").height(maxThumbHeight);
 
         });
 
-        maxThumbHeight = Math.max.apply(null, thumbsHeightArr);
-
-        $(this).find(".thumb_bg").height(maxThumbHeight);
-
-    });
+    }
 
 }
 
 
 function getItemsWrappHeight() {
 
-    $(".items_wrapp").each(function() {
+    // if( $(".items_wrapp").length ) {
 
-        lastItem = $(this).find(".article_2").eq(visibleItemsDefaultCount - 1);
+        $(".items_wrapp").each(function() {
 
-        defaultHeight = lastItem.position().top + lastItem.height() - parseInt(lastItem.css("margin-bottom"));
+            if( $(this).find(".article_2").length > visibleItemsDefaultCount 
+                && !$(this).hasClass("fullHeight")) {
 
-        $(this).css({
-            "height" : defaultHeight + "px"
+                lastItem = $(this).find(".article_2").eq(visibleItemsDefaultCount - 1);
+
+                defaultHeight = lastItem.position().top + lastItem.height() - parseInt(lastItem.css("margin-bottom"));
+
+                $(this).css({
+                    "height" : defaultHeight + "px"
+                });
+
+            } else {
+
+                $(this).addClass("fullHeight");
+
+                itemsWrappName = $(this).attr("data-items");
+
+                $(".showItems[data-items = '" + itemsWrappName + "']").css({
+                    "display" : "none"
+                });
+
+            }
+
         });
 
-    });
+    // }
 
 }
 

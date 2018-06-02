@@ -788,10 +788,10 @@ label {
 
 .main_sect .row-1 {
     position: relative;
+    z-index: 12;
     text-align: right;
     padding-top: 19px;
     padding-bottom: 9px;
-    /*padding-left: 165px;*/
     padding-left: 225px;
 }
 
@@ -875,6 +875,7 @@ label {
     position: absolute;
     bottom: -14px;
     left: 44px;
+    z-index: 12;
 }
 
 .main-nav_wrapp {
@@ -995,7 +996,6 @@ label {
     position: relative;
     background: transparent;
     cursor: pointer;
-    z-index: 12;
     border: 1px solid transparent;
 }
 
@@ -1060,7 +1060,7 @@ label {
     margin: 3px 0 0 0;
     position: relative;
     top: 4px;
-    left: 5px;
+    left: 3px;
 }
 
 .respmenubtn.active span:nth-child(2) {
@@ -1643,7 +1643,7 @@ h2.h-vertical {
 
 .team_thumb .descript {
     background-color: #f3f3f3;
-    padding: 28px 0;
+    padding: 28px 3%;
 }
 
 .team_thumb h3 {
@@ -2033,7 +2033,7 @@ h2.h-vertical {
 #map {
     width: 100%;
     height: 100%;
-    position: absolute;
+    position: absolute !important;
     top: 0;
     left: 0;
 }
@@ -2072,7 +2072,7 @@ h2.h-vertical {
 
 .footer-row {
     background: #f9f9f9;
-    padding: 19px 0;
+    padding: 9px 0;
 }
 
 .webstudio-p {
@@ -2089,7 +2089,7 @@ h2.h-vertical {
     vertical-align: middle;
     width: 89px;
     height: auto;
-    margin-left: 18px;
+    margin: 10px 0 10px 18px;
 }
 
 .reforge img {

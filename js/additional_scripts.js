@@ -4,11 +4,11 @@ $(window).on("load",function(){
 
 	if( bodyWidth <= 900 ) {
 
-		$(".main-nav").mCustomScrollbar();
+		$(".resp-nav").mCustomScrollbar();
 
 	} else {
 
-		$(".main-nav").mCustomScrollbar("destroy");
+		$(".resp-nav").mCustomScrollbar("destroy");
 
 	}
 
@@ -18,11 +18,11 @@ $(window).resize(function() {
 
 	if( bodyWidth <= 900 ) {
 
-		$(".main-nav").mCustomScrollbar();
+		$(".resp-nav").mCustomScrollbar();
 
 	} else {
 
-		$(".main-nav").mCustomScrollbar("destroy");
+		$(".resp-nav").mCustomScrollbar("destroy");
 
 	}
 
