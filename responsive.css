@@ -337,6 +337,19 @@
 
 	/*-- Section 4 - Main Page --*/
 
+	.thumbnails_3 .thumb-3 {
+	    height: 100px;
+	}
+
+	.thumbnails_4 .thumb-4 {
+	    height: 100px;
+	}
+
+	.thumbnails_4 .thumb-4:nth-child(2),
+	.thumbnails_4 .thumb-4:nth-child(3) {
+	    height: 100px;
+	}
+
 	.grey-pill {
 		min-width: 100%;
 		font-size: 16px;
