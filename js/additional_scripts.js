@@ -1,7 +1,5 @@
 $(window).on("load",function(){
 
-	$(".scroll").mCustomScrollbar();
-
 	if( bodyWidth <= 900 ) {
 
 		$(".resp-nav").mCustomScrollbar();
