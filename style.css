@@ -1734,7 +1734,7 @@ h2.h-vertical {
     left: 0;
 }
 
-.team_thumb:hover .photo-box {
+.team_thumbnails .team_thumb:hover .photo-box {
     display: none;
 }
 
@@ -1750,6 +1750,10 @@ h2.h-vertical {
     display: block;
 }
 
+.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb .toright_video {
+    display: none;
+}
+
 .team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb + .team_thumb .photo-box {
     display: none;
 }
@@ -1762,9 +1766,17 @@ h2.h-vertical {
     display: block;
 }
 
+/*.sibling_video1:hover .toright_video {
+    display: none;
+}*/
+
 .sibling_video1 .photo-box {
     display: none;
 }
+
+/*.sibling_video1:hover .photo-box {
+    display: none;
+}*/
 
 .sibling_video2 .photo-box {
     display: none;

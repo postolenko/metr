@@ -245,37 +245,50 @@ $(document).ready(function() {
 
     $(".team_thumb video").bind({
         mouseenter: function() {
-            if($(this).closest(".team_thumb").index() == 1) {
 
-                parentBlock = $(this).closest(".team_thumbnails");
+            parentBlock = $(this).closest(".team_thumbnails");
 
-                parentBlock.find(".team_thumb:eq(0)").addClass("sibling_video1");
-
+            if($(this).closest(".team_thumb").index() == 0) {
+                $(this).get(0).play();
+                parentBlock.find(".team_thumb:eq(1)").addClass("sibling_video2");
                 parentBlock.find(".team_thumb:eq(2)").addClass("sibling_video3");
+                $("#video4").get(0).play();
+                $("#video7").get(0).play();
+
+            }
+
+            if($(this).closest(".team_thumb").index() == 1) {
+                $(this).get(0).play();
+                parentBlock.find(".team_thumb:eq(0)").addClass("sibling_video1");
+                parentBlock.find(".team_thumb:eq(2)").addClass("sibling_video3");
+                $("#video2").get(0).play();
+                $("#video7").get(0).play();
 
             }
 
             if($(this).closest(".team_thumb").index() == 2) {
-
-                parentBlock = $(this).closest(".team_thumbnails");
-
+                $(this).get(0).play();
                 parentBlock.find(".team_thumb:eq(0)").addClass("sibling_video1");
-
                 parentBlock.find(".team_thumb:eq(1)").addClass("sibling_video2");
+                $("#video2").get(0).play();
+                $("#video5").get(0).play();
 
             }
         },
         mouseleave: function() {
 
+            if($(this).closest(".team_thumb").index() == 0) {
+                parentBlock.find(".team_thumb:eq(1)").removeClass("sibling_video2");
+                parentBlock.find(".team_thumb:eq(2)").removeClass("sibling_video3");
+            }
+
             if($(this).closest(".team_thumb").index() == 1) {
                 parentBlock.find(".team_thumb:eq(0)").removeClass("sibling_video1");
-
-                parentBlock.find(".team_thumb:eq(2)").removeClass("sibling_video3");
+                parentBlock.find(".team_thumb:eq(2)").removeClass("sibling_video3");    
             }
 
             if($(this).closest(".team_thumb").index() == 2) {
                 parentBlock.find(".team_thumb:eq(0)").removeClass("sibling_video1");
-
                 parentBlock.find(".team_thumb:eq(1)").removeClass("sibling_video2");
             }
         }
