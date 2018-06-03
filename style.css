@@ -1712,6 +1712,7 @@ h2.h-vertical {
 }
 
 .team_thumb .video_wrapp video {
+    display: block;
     width: 100%;
     height: auto;
     position: absolute;
