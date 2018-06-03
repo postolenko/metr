@@ -241,6 +241,28 @@ $(document).ready(function() {
 
     $("input[type='tel']").mask("+7 (999) 999-99-99");
 
+    // ----------------
+
+    // $("body").on("mouseover", "video", function(){
+    //   this.play();
+    //   $( this ).css( "background-color", "black" );
+    // });
+    // $("body").on("mouseleave", "video", function(){
+    //   this.pause();
+    // })
+
+    // $("video").play();
+
+    $(".team_thumb video").bind({
+      mouseenter: function() {
+        parentBlock = $(this).closest(".team_thumbnails");
+        // var indexThumb = 
+      },
+      mouseleave: function() {
+        
+      }
+    });
+
 
 });
 

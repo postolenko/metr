@@ -358,13 +358,13 @@ img {
     border: none;
 }
 
-.yellow-pill {
+button {
     display: inline-block;
     vertical-align: top;
-    margin: 34px 0;
+    cursor: pointer;
     padding: 22px 3% 20px 3%;
     border: 1px solid transparent;
-    background: #f2c81c;
+    background-color: #f2c81c;
     text-align: center;
     text-transform: uppercase;
     font-family: "Montserrat", "Arial", "Verdana", sans-serif;
@@ -389,18 +389,18 @@ img {
     transition-timing-function: ease;
 }
 
-.yellow-pill:link,
-.yellow-pill:visited {
-    background: #f2c81c;
+button:link,
+button:visited {
+    background-color: #f2c81c;
 }
 
-.yellow-pill:active,
-.yellow-pill.active {
-    background: #fed634;
+button:active,
+button.active {
+    background-color: #fed634;
 }
 
-.yellow-pill:hover {
-    background: #fed634;
+button:hover {
+    background-color: #fed634;
 }
 
 button:hover,
@@ -784,6 +784,7 @@ label {
 .slick-dots li button {
     display: inline-block;
     vertical-align: top;
+    padding: 0;
     cursor: pointer;
     width: 12px;
     height: 12px;
@@ -1704,6 +1705,11 @@ h2.h-vertical {
     font-weight: normal;
 }
 
+.team_thumb .video_wrapp video {
+    height: 470px;
+    width: 100%;
+}
+
 .thumb_bg {
     height: 124px;
     width: 100%;
@@ -2195,7 +2201,6 @@ h2.h-vertical {
 }
 
 .close-popup {
-    background-color: transparent;
     width: 26px;
     height: 26px;
     cursor: pointer;
@@ -2203,6 +2208,7 @@ h2.h-vertical {
     position: absolute;
     top: -35px;
     right: -35px;
+    background-color: transparent !important;
     background-image: url(img/close.png);
     background-repeat: no-repeat;
     background-position: center;
