@@ -1705,9 +1705,16 @@ h2.h-vertical {
     font-weight: normal;
 }
 
-.team_thumb .video_wrapp video {
+.team_thumb .video_wrapp {
     height: 470px;
     width: 100%;
+    position: relative;
+}
+
+.team_thumb .video_wrapp video {
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .thumb_bg {
