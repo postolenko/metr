@@ -179,7 +179,7 @@
 	}
 
 	.resp-nav li a:active,
-	.resp-nav li a.active {
+	.resp-nav li.active a {
 	    color: #4fd1cd;
 	}
 
