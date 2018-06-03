@@ -1667,6 +1667,7 @@ h2.h-vertical {
     vertical-align: top;
     width: 33.33%;
     padding: 0 2%;
+    cursor: pointer;
     text-align: center;
 }
 
@@ -1706,6 +1707,7 @@ h2.h-vertical {
 }
 
 .team_thumb .video_wrapp {
+    display: none;
     height: 470px;
     width: 100%;
     position: relative;
@@ -1713,11 +1715,14 @@ h2.h-vertical {
 
 .team_thumb .video_wrapp video {
     display: block;
-    width: 100%;
-    height: auto;
+    min-width: 100%;
+    min-height: auto;
     position: absolute;
     bottom: 0;
-    left: 0;
+    left: 50%;
+    -webkit-transform: translate(-50%, 0);
+    -moz-transform: translate(-50%, 0);
+    transform: translate(-50%, 0);
 }
 
 .thumb_bg {
@@ -1727,6 +1732,61 @@ h2.h-vertical {
     position: absolute;
     bottom: 0;
     left: 0;
+}
+
+.team_thumb:hover .photo-box {
+    display: none;
+}
+
+.team_thumbnails .team_thumb:hover .presentation_video {
+    display: block;
+}
+
+.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb .photo-box {
+    display: none;
+}
+
+.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb .toleft_video {
+    display: block;
+}
+
+.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb + .team_thumb .photo-box {
+    display: none;
+}
+
+.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb + .team_thumb .toleft_video {
+    display: block;
+}
+
+.sibling_video1 .toright_video {
+    display: block;
+}
+
+.sibling_video1 .photo-box {
+    display: none;
+}
+
+.sibling_video2 .photo-box {
+    display: none;
+}
+
+.sibling_video2 .toright_video {
+    display: block;
+}
+
+.sibling_video3 .toleft_video {
+    display: block;
+}
+
+.sibling_video3 .photo-box {
+    display: none;
+}
+
+.video_wrapp h3 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 2;
 }
 
 /*-- /Section 6 - Main Page --*/

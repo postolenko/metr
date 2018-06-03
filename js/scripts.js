@@ -243,26 +243,43 @@ $(document).ready(function() {
 
     // ----------------
 
-    // $("body").on("mouseover", "video", function(){
-    //   this.play();
-    //   $( this ).css( "background-color", "black" );
-    // });
-    // $("body").on("mouseleave", "video", function(){
-    //   this.pause();
-    // })
-
-    // $("video").play();
-
     $(".team_thumb video").bind({
-      mouseenter: function() {
-        parentBlock = $(this).closest(".team_thumbnails");
-        // var indexThumb = 
-      },
-      mouseleave: function() {
-        
-      }
-    });
+        mouseenter: function() {
+            if($(this).closest(".team_thumb").index() == 1) {
 
+                parentBlock = $(this).closest(".team_thumbnails");
+
+                parentBlock.find(".team_thumb:eq(0)").addClass("sibling_video1");
+
+                parentBlock.find(".team_thumb:eq(2)").addClass("sibling_video3");
+
+            }
+
+            if($(this).closest(".team_thumb").index() == 2) {
+
+                parentBlock = $(this).closest(".team_thumbnails");
+
+                parentBlock.find(".team_thumb:eq(0)").addClass("sibling_video1");
+
+                parentBlock.find(".team_thumb:eq(1)").addClass("sibling_video2");
+
+            }
+        },
+        mouseleave: function() {
+
+            if($(this).closest(".team_thumb").index() == 1) {
+                parentBlock.find(".team_thumb:eq(0)").removeClass("sibling_video1");
+
+                parentBlock.find(".team_thumb:eq(2)").removeClass("sibling_video3");
+            }
+
+            if($(this).closest(".team_thumb").index() == 2) {
+                parentBlock.find(".team_thumb:eq(0)").removeClass("sibling_video1");
+
+                parentBlock.find(".team_thumb:eq(1)").removeClass("sibling_video2");
+            }
+        }
+    });
 
 });
 
