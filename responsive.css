@@ -381,6 +381,14 @@
 		display: none;
 	}
 
+	.desc-novisible {
+		display: block;
+	}
+
+	.tab-novisible {
+		display: none;
+	}
+
 	/*-- Section 1 - Main Page --*/
 
 	.art_1-img {
@@ -428,19 +436,23 @@
 
 	/*-- Section 5 - Main Page --*/
 
-	/*.range_slider {
-	    padding: 30px 0 60px 0;
-	}*/
-
-/*	.range_slider .noUi-value-horizontal:nth-child(odd) {
-	    top: 20px;
+	.ranges_wrapp {
+	    border-width: 5px;
 	}
 
-	.range_slider .noUi-value-horizontal:nth-child(even) {
-	    top: -10px;
-	}*/
+	.range_wrapp {
+	    margin: 30px 0;
+	}
 
 	/*-- /Section 5 - Main Page --*/
+
+	/*-- Section 6 - Main Page --*/
+
+	.range_slider {
+	    display: none;
+	}
+
+	/*-- /Section 6 - Main Page --*/
 
 	/*-- Section 7 - Main Page --*/
 
@@ -530,6 +542,10 @@
 	}
 
 	/*-- /Section 6 - Main Page --*/
+
+	.close-popup {
+	    right: 0;
+	}
 
 }
 

@@ -14,17 +14,40 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/nouislider.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/select2.css">
 	<script src="vendors/js/jquery.js"></script>
 	<script src="slick/slick.js"></script>
 	<script src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="vendors/js/smoothscroll.js"></script>
 	<script src="vendors/js/jquery.fancybox.js"></script>
 	<script src="vendors/js/nouislider.js"></script>
+	<script src="vendors/js/select2.js"></script>
+	<script src="vendors/js/jquery.maskedinput.min.js"></script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 
 </head>
 
 <body>
+
+	<div class="popup_wrapp scroll" data-popup ="popup_1">
+		<div class="popup">
+			<button type="button" class="close-popup"></button>
+			<h3>Оставьте заявку</h3>
+			<p class="h-desc">и мы вам перезвоним</p>
+			<div class="form_wrapp">
+				<form>
+					<div class="input_wrapp">
+						<input type="text" name="#" placeholder="Введите ваше имя">
+					</div>
+					<div class="input_wrapp">
+						<input type="tel" name="#" placeholder="Введите ваш номер телефона">
+					</div>
+					<button type="submit" class="yellow-pill submit_btn">Посмотреть проекты</button>
+				</form>
+			</div>
+			<p>Я согласен с <a href="#" class="yellow_link">политикой обработки персональных данных</a></p>
+		</div>
+	</div>
 
 	<div class="wrapper">
 
@@ -53,7 +76,7 @@
 				</div>
 				<div class="callback_wrapp">
 					<p><a href="tel:89805239092" class="tel-link">8 (980) 523-90-92</a></p>
-					<p><a href="#" class="yellow_link">Заказать звонок</a></p>
+					<p><a href="#" class="yellow_link show_popup" data-popup-name ="popup_1">Заказать звонок</a></p>
 				</div>
 				<div class="respbtn-col">
 					<button class="respmenubtn">	
@@ -378,17 +401,44 @@
 										<div class="range_slider">
 											<div class="range" id="range_1"></div>
 										</div>
+										<div class="select_wrapp desc-novisible">
+											<select>
+												<option>Квартира</option>
+												<option>Загородный дом</option>
+												<option>Комм. недвижимость</option>
+											</select>
+										</div>
 									</div>
 									<div class="range_wrapp">
-										<h3>Площадь помещения: <span class="msqVal">0</span> м2</h3>
+										<h3 class="tab-novisible">Площадь помещения: <span class="msqVal">0</span> м2</h3>
 										<div class="range_slider">
 											<div class="range" id="range_2"></div>
+										</div>
+										<div class="overflow_wrapp desc-novisible">
+											<h3>Площадь помещения:</h3>
+											<div class="inline_inputs">
+												<div class="input_wrapp input_wrapp_2">
+													<input type="number" name="" placeholder="0">
+												</div>
+												<div>
+													<h3>м2</h3>
+												</div>
+											</div>
 										</div>
 									</div>
 									<div class="range_wrapp">
 										<h3>К какому стилю вы склоняетесь?</h3>
 										<div class="range_slider">
 											<div class="range" id="range_3"></div>
+										</div>
+										<div class="select_wrapp desc-novisible">
+											<select>
+												<option>Неоклассик</option>
+												<option>Лофт</option>
+												<option>Современный</option>
+												<option>Скандинавский</option>
+												<option>Прованс</option>
+											</select>
 										</div>
 									</div>
 									<div class="range_wrapp">
@@ -410,7 +460,7 @@
 									<div class="inner">
 										<h3>Стоимость:</h3>
 										<p>190 000 руб.</p>							
-										<a href="#" class="yellow-pill">Получить точный расчет</a>
+										<a href="#" class="yellow-pill show_popup" data-popup-name ="popup_1">Получить точный расчет</a>
 									</div>
 								</div>
 							</div>
@@ -740,7 +790,7 @@
 									<p><a class="yellow_link" href="mailto:hello@domain.ru">hello@domain.ru</a></p>
 								</div>
 
-								<a href="#" class="yellow-pill">Консультация дизайнера</a>
+								<a href="#" class="yellow-pill show_popup" data-popup-name ="popup_1">Консультация дизайнера</a>
 							</div>
 						</div>
 

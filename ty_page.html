@@ -14,17 +14,40 @@
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.mCustomScrollbar.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/jquery.fancybox.css">
 	<link rel="stylesheet" type="text/css" href="vendors/css/nouislider.css">
+	<link rel="stylesheet" type="text/css" href="vendors/css/select2.css">
 	<script src="vendors/js/jquery.js"></script>
 	<script src="slick/slick.js"></script>
 	<script src="vendors/js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="vendors/js/smoothscroll.js"></script>
 	<script src="vendors/js/jquery.fancybox.js"></script>
 	<script src="vendors/js/nouislider.js"></script>
+	<script src="vendors/js/select2.js"></script>
+	<script src="vendors/js/jquery.maskedinput.min.js"></script>
 	<link rel="icon" type="image/png" href="favicon/favicon.ico" sizes="16x16">
 
 </head>
 
 <body>
+
+	<div class="popup_wrapp scroll" data-popup ="popup_1">
+		<div class="popup">
+			<button type="button" class="close-popup"></button>
+			<h3>Оставьте заявку</h3>
+			<p class="h-desc">и мы вам перезвоним</p>
+			<div class="form_wrapp">
+				<form>
+					<div class="input_wrapp">
+						<input type="text" name="#" placeholder="Введите ваше имя">
+					</div>
+					<div class="input_wrapp">
+						<input type="tel" name="#" placeholder="Введите ваш номер телефона">
+					</div>
+					<button type="submit" class="yellow-pill submit_btn">Посмотреть проекты</button>
+				</form>
+			</div>
+			<p>Я согласен с <a href="#" class="yellow_link">политикой обработки персональных данных</a></p>
+		</div>
+	</div>
 
 	<div class="wrapper">
 
@@ -53,7 +76,7 @@
 				</div>
 				<div class="callback_wrapp">
 					<p><a href="tel:89805239092" class="tel-link">8 (980) 523-90-92</a></p>
-					<p><a href="#" class="yellow_link">Заказать звонок</a></p>
+					<p><a href="#" class="yellow_link show_popup" data-popup-name ="popup_1">Заказать звонок</a></p>
 				</div>
 				<div class="respbtn-col">
 					<button class="respmenubtn">	

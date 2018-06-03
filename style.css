@@ -412,19 +412,41 @@ a:active {
 }
 
 input {
-
+    display: block;
+    width: 100%;
+    height: 71px;
+    padding: 0 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 207, 207);
+    font-family: "Montserrat", "Arial", "Verdana", sans-serif;
+    font-size: 16px;
+    line-height: 69px;
+    font-weight: 300;
+    color: #000000;
 }
 
 input:focus {
-
+    border-color: #00bcb6;
 }
 
 textarea {
-
+    display: block;
+    width: 100%;
+    height: 150px;
+    padding: 22px 20px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: rgb(207, 207, 207);
+    font-family: "Montserrat", "Arial", "Verdana", sans-serif;
+    font-size: 16px;
+    line-height: 24px;
+    font-weight: 300;
+    color: #000000;
 }
 
 textarea:focus {
-
+    border-color: #00bcb6;
 }
 
 label {
@@ -467,6 +489,10 @@ label {
 
 .align-left {
     text-align: left;
+}
+
+.desc-novisible {
+    display: none;
 }
 
 /*-- Icons --*/
@@ -1558,6 +1584,26 @@ h2.h-vertical {
     margin: 28px 0;
 }
 
+.select_wrapp {
+    margin: 20px 0;
+}
+
+.inline_inputs {
+    margin: 15px -10px;
+}
+
+.inline_inputs > div {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px 10px;
+}
+
+.input_wrapp_2 {
+    display: inline-block;
+    vertical-align: top;
+    width: 165px;
+}
+
 .checkboxes_wrapp {
     margin: 6px -10px;
 }
@@ -1575,6 +1621,7 @@ h2.h-vertical {
     position: absolute;
     top: 0;
     left: 0;
+    opacity: 0;
 }
 
 .checkbox label {
@@ -2077,7 +2124,7 @@ h2.h-vertical {
 
 .webstudio-p {
     text-align: center;
-    font-family: "", "Arial", "Verdana", sans-serif;
+    font-family: "Montserrat", "Arial", "Verdana", sans-serif;
     font-size: 14px;
     line-height: 16px;
     font-weight: 500;
@@ -2136,11 +2183,11 @@ h2.h-vertical {
 
 .popup {
     display: block;
-    max-width: 860px;
-    margin: 90px auto 20px auto;
-    border-width: 2px;
-    border-color: rgb(248, 87, 6);
-    border-style: solid;
+    max-width: 440px;
+    position: relative;
+    margin: 90px auto 50px auto;
+    padding: 48px 3.5% 55px 3.5%;
+    text-align: center;
     background-color: rgb(255, 255, 255);
     -webkit-box-shadow: 0 8px 17px .7px rgba(40, 14, 1, .17);
     -moz-box-shadow: 0 8px 17px .7px rgba(40, 14, 1, .17);
@@ -2149,14 +2196,51 @@ h2.h-vertical {
 
 .close-popup {
     background-color: transparent;
-    width: 25px;
-    height: 25px;
+    width: 26px;
+    height: 26px;
     cursor: pointer;
     z-index: 12;
+    position: absolute;
+    top: -35px;
+    right: -35px;
     background-image: url(img/close.png);
     background-repeat: no-repeat;
     background-position: center;
     border: 1px solid transparent;
 }
+
+.popup h3 {
+    padding: 5px 0;
+    text-transform: uppercase;
+}
+
+.popup .h-desc {
+    font-size: 20px;
+    line-height: 25px;
+}
+
+.form_wrapp {
+    margin: 33px 0 14px 0;
+}
+
+.input_wrapp {
+    margin: 20px 0;
+}
+
+.popup p {
+    font-size: 16px;
+    line-height: 19px;
+    font-weight: 500;
+}
+
+.popup p a {
+    font-weight: 500;
+}
+
+.popup .submit_btn {
+    width: 100%;
+    margin: 10px 0;
+}
+
 
 /*-- /Popups --*/
