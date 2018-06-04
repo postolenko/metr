@@ -243,55 +243,51 @@ $(document).ready(function() {
 
     // ----------------
 
-    $(".team_thumb video").bind({
-        mouseenter: function() {
+    $(".team_thumb").mouseenter( function() {
 
-            parentBlock = $(this).closest(".team_thumbnails");
+        parentBlock = $(this).closest(".team_thumbnails");
 
-            if($(this).closest(".team_thumb").index() == 0) {
-                $(this).get(0).play();
-                parentBlock.find(".team_thumb:eq(1)").addClass("sibling_video2");
-                parentBlock.find(".team_thumb:eq(2)").addClass("sibling_video3");
+        if( !parentBlock.hasClass("active")) {
+
+            parentBlock.addClass("active");
+
+            setTimeout( function() {
+
+                parentBlock.find(".video_wrapp").css({"display" : "none"});
+
+                parentBlock.removeClass("active");
+
+            }, 7000);
+
+            if($(this).index() == 0) {
+                $(this).find(".presentation_video").css({"display" : "block"});
+                parentBlock.find(".team_thumb:eq(1) .toleft_video").css({"display" : "block"});
+                parentBlock.find(".team_thumb:eq(2) .toleft_video").css({"display" : "block"});
+                $("#video1").get(0).play();
                 $("#video4").get(0).play();
                 $("#video7").get(0).play();
-
             }
 
-            if($(this).closest(".team_thumb").index() == 1) {
-                $(this).get(0).play();
-                parentBlock.find(".team_thumb:eq(0)").addClass("sibling_video1");
-                parentBlock.find(".team_thumb:eq(2)").addClass("sibling_video3");
+            if($(this).index() == 1) {
+                $(this).find(".presentation_video").css({"display" : "block"});
+                parentBlock.find(".team_thumb:eq(0) .toright_video").css({"display" : "block"});
+                parentBlock.find(".team_thumb:eq(2) .toleft_video").css({"display" : "block"});
+                $("#video3").get(0).play();
                 $("#video2").get(0).play();
                 $("#video7").get(0).play();
-
             }
 
-            if($(this).closest(".team_thumb").index() == 2) {
-                $(this).get(0).play();
-                parentBlock.find(".team_thumb:eq(0)").addClass("sibling_video1");
-                parentBlock.find(".team_thumb:eq(1)").addClass("sibling_video2");
+            if($(this).index() == 2) {
+                $(this).find(".presentation_video").css({"display" : "block"});
+                parentBlock.find(".team_thumb:eq(0) .toright_video").css({"display" : "block"});
+                parentBlock.find(".team_thumb:eq(1) .toright_video").css({"display" : "block"});
+                $("#video6").get(0).play();
                 $("#video2").get(0).play();
                 $("#video5").get(0).play();
-
-            }
-        },
-        mouseleave: function() {
-
-            if($(this).closest(".team_thumb").index() == 0) {
-                parentBlock.find(".team_thumb:eq(1)").removeClass("sibling_video2");
-                parentBlock.find(".team_thumb:eq(2)").removeClass("sibling_video3");
             }
 
-            if($(this).closest(".team_thumb").index() == 1) {
-                parentBlock.find(".team_thumb:eq(0)").removeClass("sibling_video1");
-                parentBlock.find(".team_thumb:eq(2)").removeClass("sibling_video3");    
-            }
-
-            if($(this).closest(".team_thumb").index() == 2) {
-                parentBlock.find(".team_thumb:eq(0)").removeClass("sibling_video1");
-                parentBlock.find(".team_thumb:eq(1)").removeClass("sibling_video2");
-            }
         }
+
     });
 
 });

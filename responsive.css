@@ -20,6 +20,18 @@
 
 	/*-- /Header --*/
 
+	/*-- Section 6 - Main Page --*/
+
+	.team_thumb .photo-box {
+	    height: 410px;
+	}
+
+	.team_thumb .video_wrapp {
+	    height: 410px;
+	}
+
+	/*-- /Section 6 - Main Page --*/
+
 }
 
 @media only screen and (max-width: 1140px) {
@@ -270,7 +282,11 @@
 	/*-- Section 6 - Main Page --*/
 
 	.team_thumb .photo-box {
-	    height: 345px;
+	    height: 330px;
+	}
+
+	.team_thumb .video_wrapp {
+	    height: 330px;
 	}
 
 	.team_thumb .descript {
@@ -444,12 +460,28 @@
 	    margin: 30px 0;
 	}
 
+	.range_slider {
+	    display: none;
+	}
+
 	/*-- /Section 5 - Main Page --*/
 
 	/*-- Section 6 - Main Page --*/
 
-	.range_slider {
-	    display: none;
+	.team_thumb {
+	    width: 50%;
+	}
+
+	.thumb_bg {
+		display: none;
+	}
+
+	.video_wrapp {
+		display: none !important;
+	}
+
+	.photo-box {
+		display: block !important;
 	}
 
 	/*-- /Section 6 - Main Page --*/
@@ -537,15 +569,19 @@
 
 	/*-- Section 6 - Main Page --*/
 
-	.team_thumb .photo-box {
-	    height: 220px;
+	.team_thumb {
+	    width: 100%;
 	}
 
 	/*-- /Section 6 - Main Page --*/
 
+	/*-- Popup --*/
+
 	.close-popup {
 	    right: 0;
 	}
+
+	/*-- /Popup --*/
 
 }
 
@@ -613,23 +649,6 @@
 	}
 
 	/*-- /Section 4 - Main Page --*/
-
-	/*-- Section 6 - Main Page --*/
-
-	.team_thumb {
-	    width: 100%;
-	    margin: 20px 0;
-	}
-
-	.team_thumb .photo-box {
-	    height: 280px;
-	}
-
-	.thumb_bg {
-	    display: none;
-	}
-
-	/*-- /Section 6 - Main Page --*/
 
 	/*-- Section 7 - Main Page --*/
 

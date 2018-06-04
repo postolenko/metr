@@ -1653,7 +1653,7 @@ h2.h-vertical {
 /*-- Section 6 - Main Page --*/
 
 .team_thumbnails {
-    margin: 63px 0 29px 0;
+    margin: 10px 0 29px 0;
     position: relative;
 }
 
@@ -1669,6 +1669,7 @@ h2.h-vertical {
     padding: 0 2%;
     cursor: pointer;
     text-align: center;
+    position: relative;
 }
 
 .team_thumb .photo-box {
@@ -1680,14 +1681,23 @@ h2.h-vertical {
     display: block;
     width: auto;
     height: auto;
-    max-height: 100%;
     max-width: 100%;
+    max-height: 100%;
     position: absolute;
     bottom: 0;
     left: 50%;
-    -webkit-transform: translate(-50%, 0);
-    -moz-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+}
+
+.team_thumb .videos video {
+    display: block;
+    width: auto;
+    height: auto;
+    max-width: 100%;
+    max-height: 100%;
+    position: absolute;
+    bottom: 0;
+    left: 0;
 }
 
 .team_thumb .descript {
@@ -1711,6 +1721,7 @@ h2.h-vertical {
     height: 470px;
     width: 100%;
     position: relative;
+    /*outline: 1px solid red;*/
 }
 
 .team_thumb .video_wrapp video {
@@ -1720,9 +1731,14 @@ h2.h-vertical {
     position: absolute;
     bottom: 0;
     left: 50%;
+    /*outline: 1px solid red;*/
     -webkit-transform: translate(-50%, 0);
     -moz-transform: translate(-50%, 0);
     transform: translate(-50%, 0);
+}
+
+.team_thumbnails.active .photo-box {
+    display: none;
 }
 
 .thumb_bg {
@@ -1732,73 +1748,6 @@ h2.h-vertical {
     position: absolute;
     bottom: 0;
     left: 0;
-}
-
-.team_thumbnails .team_thumb:hover .photo-box {
-    display: none;
-}
-
-.team_thumbnails .team_thumb:hover .presentation_video {
-    display: block;
-}
-
-.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb .photo-box {
-    display: none;
-}
-
-.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb .toleft_video {
-    display: block;
-}
-
-.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb .toright_video {
-    display: none;
-}
-
-.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb + .team_thumb .photo-box {
-    display: none;
-}
-
-.team_thumbnails .team_thumb:nth-child(1):hover + .team_thumb + .team_thumb .toleft_video {
-    display: block;
-}
-
-.sibling_video1 .toright_video {
-    display: block;
-}
-
-/*.sibling_video1:hover .toright_video {
-    display: none;
-}*/
-
-.sibling_video1 .photo-box {
-    display: none;
-}
-
-/*.sibling_video1:hover .photo-box {
-    display: none;
-}*/
-
-.sibling_video2 .photo-box {
-    display: none;
-}
-
-.sibling_video2 .toright_video {
-    display: block;
-}
-
-.sibling_video3 .toleft_video {
-    display: block;
-}
-
-.sibling_video3 .photo-box {
-    display: none;
-}
-
-.video_wrapp h3 {
-    position: absolute;
-    top: 0;
-    left: 0;
-    z-index: 2;
 }
 
 /*-- /Section 6 - Main Page --*/
